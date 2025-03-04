@@ -3,14 +3,13 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAhAXHzE41RjIm71qT7sFESscTqa7BxnVc",
-    authDomain: "visualizehomeai.firebaseapp.com",
-    projectId: "visualizehomeai",
-    storageBucket: "visualizehomeai.firebasestorage.app",
-    messagingSenderId: "121010965602",
-    appId: "1:121010965602:web:47379df01e6fa3a9b4d53b",
-    measurementId: "G-GXPDQJ04QV"
-  };
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
